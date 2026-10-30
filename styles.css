@@ -42,3 +42,7 @@ body.dialog-open { overflow: hidden; }
 .news-item a:hover{color:var(--link);text-decoration-color:currentColor}
 @media(max-width:900px){.news{grid-template-columns:120px minmax(0,1fr);gap:24px}.news-item{grid-template-columns:105px minmax(0,1fr);gap:12px}}
 @media(max-width:650px){.news{grid-template-columns:1fr;gap:22px}.news-list{gap:18px}.news-item{grid-template-columns:1fr;gap:3px;font-size:13px}.nav-links{column-gap:18px;row-gap:2px}}
+
+/* Keep advisor details with affiliation; give them their own line on small screens. */
+.role-advisor{display:inline-block;white-space:nowrap}.role-advisor::before{content:" · "}
+@media(max-width:600px){.role-advisor{display:block}.role-advisor::before{content:none}}
