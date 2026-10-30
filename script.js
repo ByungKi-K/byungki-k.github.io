@@ -18,6 +18,7 @@
     filters.querySelectorAll('button').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.filter === filter)));
     heading.textContent = filter === 'selected' ? 'Selected publications' : 'Publications';
     showAll.hidden = filter === 'all';
+    showAll.parentElement.hidden = filter === 'all';
     if (announce) status.textContent = `${visible} publications shown.`;
   }
   filters.hidden = false;
